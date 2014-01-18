@@ -1,0 +1,1 @@
+One listwise learning to rank algorithm. It extends the boosting philosophy from binary classification to rank learning problem.
