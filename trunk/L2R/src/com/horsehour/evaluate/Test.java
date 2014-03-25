@@ -25,7 +25,12 @@ import com.horsehour.util.Messenger;
 import com.horsehour.util.TickClock;
 
 /**
- * <p> Evaluate the ranking models.
+ * <p> Test DEARank algorithm.
+ * <p> 1. Build one workspace
+ * <p> 2. Provide data sets(train, vali, test)
+ * <p> 3. Construct weak candidates using WeakGenerator instance
+ * <p> 4. Give parameters such as type, niter, trainmetric et al
+ * <p> 5. Start the training and evaluation
  * @author Chunheng Jiang
  * @version 3.0
  * @since 20131219
@@ -523,7 +528,7 @@ public class Test {
 	public static void main(String[] args) {
 		TickClock.beginTick();
 
-		String workspace = "F:/Research/Test/";
+		String workspace = "F:/Research/Test/";//workspace
 		
 		Test test = new Test();
 		test.workspace = workspace;
@@ -538,7 +543,7 @@ public class Test {
 		int niter = 200;//number of iteration
 		test.msg.setNumOfIter(niter);
 
-		test.msg.set("oriented", type);
+		test.msg.set("oriented", type);//type of dearank(o-dearank, i-dearank)
 		
 		test.ranker = new DEARank();//ranker
 
