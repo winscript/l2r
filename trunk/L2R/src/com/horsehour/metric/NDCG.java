@@ -7,7 +7,7 @@ import java.util.List;
 import com.horsehour.util.Sorter;
 
 /**
- * 实现标准度量Normalized Discount Cumulative Gain(NDCG)
+ * 脢碌脧脰卤锚脳录露脠脕驴Normalized Discount Cumulative Gain(NDCG)
  * @author Chunheng Jiang
  * @version 3.0
  * @since 20131201
@@ -33,7 +33,7 @@ public class NDCG extends DCG{
 		List<Double> score = new ArrayList<Double>();
 		label.addAll(desire);
 		score.addAll(predict);
-		Sorter.linkedSort(score, label, true);//基于score对label降序排列
+		Sorter.linkedSort(score, label, true);//禄霉脫脷score露脭label陆碌脨貌脜脜脕脨
 		
 		double[] dcg = getTopKDCG(label);
 		Collections.sort(label, Collections.reverseOrder());
@@ -41,7 +41,7 @@ public class NDCG extends DCG{
 
 		double r = idcg[k - 1];
 		if(r == 0)
-			return 0;
+			return 1;
 		else
 			return dcg[k - 1]/r;
 	}
