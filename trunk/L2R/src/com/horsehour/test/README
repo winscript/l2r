@@ -1,0 +1,61 @@
+This is the guide to run the test codes.
+
+To run the test codes of DEARank algorithm, the
+steps and needed parameters are summarized in 
+list as follows:
+
+I. Run com.horsehour.test.Test_WeakGenerator.java
+
+Parameters:
+(1). workspace
+			   directory of the data set that is computed 
+			   to construct weak ranker candidates
+
+(2). type     
+               type of derived DEA model, O for O-CCR, 
+               I for I-CCR 
+
+II. Run com.horsehour.test.Test_Eval.java
+
+Parameters:
+(1). workspace 
+			   directory of the data set that is computed 
+			   to construct weak ranker candidates
+				
+(2). storePredict 
+               indicate whether the predictions are stored.
+               In default, storePredict = false
+
+(3). normalize
+               indicate whether the data set should be norma-
+               lized. In default, normalize = false. Elsewise,
+               you can set one normalizer, such as 
+               MaxNormalizer, SumNormalizer, ZScoreNormalizer
+
+(4). trainMetric
+               the metric used for training, including NDCG@k,
+               DCG@k, MAP, MAPNDCG, Precision, ERR et al. 
+(5). valiMetric
+               the metric used for validation, it is the same
+               as trainMetric in default
+               
+(6). testMetrics
+               the metrics used for testing, they are
+               NDCG@1, NDCG@2, ..., NDCG@10, and MAP
+               in default.
+               
+(7). type    
+               type of DEARank algorithm, O for O-DEARank, 
+               I for I-DEARank
+
+(8). niter
+               positive number of iterations, e.g. niter = 200
+
+
+NOTE: Before the running, you should download data sets from LETOR
+      http://research.microsoft.com/en-us/um/beijing/projects/letor/
+      then, copy the downloaded data set to the customized workspace
+      
+      
+
+
